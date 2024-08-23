@@ -1,0 +1,34 @@
+// Approach 1 -> TC-> O(N^2)
+->Take two loops and find the sum once the sum is equal to k we will print that subarray.
+
+//Approach 2 -> Sliding window approach
+-> We will take two pointers and keep it at index 0 at start.
+-> then we will see the sum and if sum<k then we will expand the window and if sum>k then we will shrink the window until we find the sum. 
+
+void subarray_sum(int arr[], int n, int k)
+	    {
+	        int sum=arr[0];
+	        int left=0;
+	        int right=1;
+	        
+	        while(right<n)
+	        {
+	            if(sum==k)
+	            {
+	                ans.push_back({left, right});
+	                return ans;
+	            }
+	            if(sum<k && left<right)
+	            {
+	                sum+=arr[right];
+	                right++;
+	            }
+	            else if(sum>k && left<right)
+	            {
+	                sum-=arr[left];
+	                left++;
+	            }
+	            
+	        }
+	        return ans;
+	    }
