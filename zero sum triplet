@@ -1,0 +1,37 @@
+// Approach 1-> TC-O(N^3)
+run three loops and take their sum whoseoever sums up to zero are the required triplets 
+
+// Approach 2-> 
+-> Sort the Array -> TC(nLog n)
+-> then take three variables and fix the value of one. now we have the to see which doublet forms the sum on which addind the fixed value sums up to zero so this will become a simple
+two pointer problem.
+
+void zero_sum_triplets( arr[], n)
+{
+    for(int i=0; i<n-2; i++)
+    {
+        l=i+1;
+        r=n-1;
+        while(l<r)
+	    {
+	        if(arr[l]+arr[r]<req_val)
+	        {
+	            l++;
+	        }
+	        else if(arr[l]+arr[r]>req_val)
+	        {
+	            r--;
+	        }
+	        else{
+	            ans.push_back({{i, l}, r});
+              l++;
+              r--;
+	        }
+	    }
+    }
+
+
+
+
+
+}
