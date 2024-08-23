@@ -1,0 +1,2 @@
+// Approach 1
+Write any traversal for both and check if the traversals are exactly same if yes then they are identical return true else false
