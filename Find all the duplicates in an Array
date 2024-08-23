@@ -1,0 +1,20 @@
+// Approach 1 -> Use set or hash maps 
+
+//Approach 2 -> TC-> O(N) && SC-> O(1) 
+Also all elements are between 0 -> n-1 and number is either appeared once or twice. we have to return numbers who have appeared twice.
+-> Iterate through the loop and turn index=arr[i] negative. so when duplicate will try to negative the number at index it would already have
+been negative and hence it would add to the ans.
+
+vector<int> result;
+	    for(int n: nums)
+	    {
+	        n=abs(n);
+	        if(nums[n-1]>0)
+	        {
+	            nums[n-1]*=-1;
+	        }
+	        else{
+	            result.push_back(n);
+	        }
+	    }
+	    return result;
