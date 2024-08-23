@@ -1,0 +1,26 @@
+// Approach 1
+-> use hash maps to store the count of the variables
+-> then according to count generate a string
+
+unordered_map<char, int> freqMap;
+	    for(auto c: s)
+	    {
+	        freqMap[c]++;
+	    }
+	    
+	    vector<pair<char, int>> count_vec;
+	    for(auto it : freqMap)
+	    {
+	        count_vec.push_back({it.first, it.second});
+	    }
+	    sort(count_vec.begin(), count_vec.end(), [](pair<char, int>& a,
+	    pair<char, int>& b){
+	        return a.second>b.second;
+	    });
+	    
+	    string result="";
+	    for(auto it: count_vec)
+	    {
+	        result.append(it.second, it.first);
+	    }
+	    return result;
