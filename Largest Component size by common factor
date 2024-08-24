@@ -1,0 +1,7 @@
+// Approach 1 - by graph 
+in this edge will be between only those two who contain a common factor and so we have to find the maximum size of the component
+-> first we will use N^2 loop to build a graph by using some traversal 
+-> then some time will also get used up in knowing the max size of the component.
+So it will take a hell lot of time for higher nodes.
+
+// Approach 2 -> Union/Disjoint sets
