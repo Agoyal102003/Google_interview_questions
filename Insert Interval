@@ -17,6 +17,7 @@ vector<vector<int>> insert(vector<vector<int>>& interval, vector<int> newInterva
 	        {
 	            mI[0]=min(interval[i][0], mI[0]);
 	            mI[1]=max(interval[i][1], mI[1]);
+		    i++;
 	        }
 	        result.push_back(mI);
 	        
